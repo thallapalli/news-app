@@ -12,7 +12,11 @@ router.get('/',(req,res) => {
      
    })
    */
-
+	router.get('/hello', (req,res,next) => {
+  	res.send('Hello World')
+    
+   
+   })
    router.get('/',async (req,res) => {
   
     let articles=await db.any('SELECT articleid,title,body FROM newsdb.articles')
