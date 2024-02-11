@@ -9,7 +9,8 @@ const path=require('path')
 const checkAuthorization=require('./utils/authorization')
 const userRoutes=require('./routes/users')
 const indexRoutes=require('./routes/index')
-const PORT = 3000
+//const PORT = 3000
+const PORT = process.env.PORT || 8080
 const VIEWS_PATH = path.join(__dirname,'/views')
 // configuring your view engine
 app.engine('mustache',mustacheExpress(VIEWS_PATH + '/partials','.mustache'))
